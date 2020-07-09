@@ -1,0 +1,70 @@
+@import "src/styles/variables";
+
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 170px;
+  height: 60px;
+  color: $primary-dark;
+  background: transparent;
+
+  &::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 200px;
+    top: -15px;
+    background: white;
+    width: 190px;
+    height: 90px;
+    z-index: 9999;
+    clip-path: url(#menuItem);
+    transition: left 0.7s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  &__icon {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    font-size: 20px;
+    margin-right: 2rem;
+    color: $secondary-light;
+    transition: color 0.7s ease-in-out;
+    z-index: 10000;
+  }
+
+  &__text {
+    text-align: left;
+    font-size: 14pt;
+    font-variant: small-caps;
+    font-weight: 400;
+    color: $secondary-light;
+    transition: color 0.7s ease-in-out;
+    z-index: 10000;
+  }
+
+  &:hover::after, &.active::after {
+    left: -20px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__text, &.active &__text {
+    color: $primary-dark;
+  }
+
+  &:hover &__icon, &.active &__icon {
+    color: $primary-dark;
+  }
+}

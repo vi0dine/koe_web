@@ -1,0 +1,109 @@
+@import "src/styles/variables";
+
+.topbar {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5vh;
+    margin-right: 1rem;
+  }
+}
+
+.notifications {
+  &__container {
+    position: relative;
+    margin-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .notifications__icon {
+      color: $secondary
+    }
+
+    &:hover .badge__container {
+      background: $secondary-dark;
+      border: 2px solid $secondary-light;
+    }
+
+    &:hover .badge__counter {
+      color: $white;
+    }
+  }
+
+  &__icon {
+    color: $secondary-light;
+    font-size: 18pt;
+    transform: rotateZ(25deg);
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.badge {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -7px;
+    bottom: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $secondary-light;
+    border: 2px solid $secondary-dark;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__counter {
+    font-weight: 600;
+    font-size: 7pt;
+    color: $primary-dark;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.account {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 0 1rem 0 1rem;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba($primary-light, 0.3);
+    }
+  }
+}
+
+.name {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  &__text {
+    font-weight: 400;
+    color: $white;
+    font-size: 14pt;
+    font-variant: small-caps;
+  }
+}
+
+.dropdown {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    color: $white;
+    font-size: 12pt;
+  }
+}
