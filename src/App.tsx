@@ -1,34 +1,49 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import './App.scss';
-import AppLayout from './layout/AppLayout';
+import AppLayout from './layout/AppLayout/AppLayout';
 import DashboardPage from './pages/Dashboard/Dashboard.page';
 import CoursesPage from './pages/Courses/Courses.page';
 import TestsPage from './pages/Tests/Tests.page';
 import ResourcesPage from './pages/Resources/Resources.page';
 import CalendarPage from './pages/Calendar/Calendar.page';
+import EntryLayout from './layout/EntryLayout/EntryLayout';
+import EntryPage from './pages/Entry/Entry.page';
 
 function App() {
     return (
-        <AppLayout>
-            <Switch>
-                <Route exact path={'/'}>
+        <Switch>
+            <Route exact path={'/quest'}>
+                <EntryLayout>
+                    <EntryPage />
+                </EntryLayout>
+            </Route>
+            <Route exact path={'/'}>
+                <AppLayout>
                     <DashboardPage />
-                </Route>
-                <Route path={'/courses'}>
+                </AppLayout>
+            </Route>
+            <Route path={'/courses'}>
+                <AppLayout>
                     <CoursesPage />
-                </Route>
-                <Route path={'/tests'}>
+                </AppLayout>
+            </Route>
+            <Route path={'/tests'}>
+                <AppLayout>
                     <TestsPage />
-                </Route>
-                <Route path={'/resources'}>
+                </AppLayout>
+            </Route>
+            <Route path={'/resources'}>
+                <AppLayout>
                     <ResourcesPage />
-                </Route>
-                <Route path={'/calendar'}>
+                </AppLayout>
+            </Route>
+            <Route path={'/calendar'}>
+                <AppLayout>
                     <CalendarPage />
-                </Route>
-            </Switch>
-        </AppLayout>
+                </AppLayout>
+            </Route>
+        </Switch>
     );
 }
 

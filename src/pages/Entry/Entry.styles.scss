@@ -1,0 +1,41 @@
+@import "src/styles/variables";
+
+.EntryPage {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &__left {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      flex: 2;
+      padding-left: 15px;
+      background: $white;
+    }
+  }
+
+  &__right {
+    &__container {
+      display: flex;
+      height: 100vh;
+      flex: 4;
+      background: $primary;
+    }
+  }
+}
+
+.Logo {
+  &__container {
+    padding-top: 2rem;
+  }
+
+  &__img {
+
+  }
+}

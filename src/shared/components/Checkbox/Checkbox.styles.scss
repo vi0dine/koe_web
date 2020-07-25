@@ -1,0 +1,76 @@
+@import "src/styles/variables";
+
+.Checkbox {
+  &__container {
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    & input:checked ~ .Checkbox__checkbox {
+      background: $primary-light;
+      border: 1px inset rgba($primary-light, 0.1);
+    }
+
+    & input:checked ~ .Checkbox__checkbox:after {
+      opacity: 1;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    box-shadow: 0 0 2px $primary;
+    border: 1px inset rgba($primary-dark, 0.3);
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      left: 6px;
+      top: 4px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2.5px 2.5px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      transition: all 0.7s ease-in-out;
+    }
+  }
+
+  &__label {
+    flex: 10;
+    color: $dark;
+    font-weight: 400;
+    line-height: 140%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

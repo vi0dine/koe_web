@@ -1,0 +1,39 @@
+@import "src/styles/variables";
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px $primary;
+
+    & .Button__label {
+      font-size: 14.5pt;
+    }
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &.primary {
+    background: $primary-light;
+  }
+
+  &__label {
+    color: #ebebeb;
+    font-weight: 600;
+    font-size: 14pt;
+    line-height: 140%;
+    backface-visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+}

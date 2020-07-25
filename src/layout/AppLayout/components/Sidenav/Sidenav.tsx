@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../logo.svg';
+import logo from '../../../../logo_light.svg';
 import './Sidenav.styles.scss';
 import MenuItem from './MenuItem/MenuItem';
 import {

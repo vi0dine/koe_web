@@ -1,0 +1,35 @@
+@import "src/styles/variables";
+
+.Input {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 20px;
+    font-size: 10pt;
+  }
+
+  &__field {
+    height: 35px;
+    width: 95%;
+    padding-left: 0.6rem;
+    border-radius: 10px;
+    border: 1px inset rgba($primary, 0.4);
+    box-shadow: 0 0 2px $primary;
+    font-family: 'Montserrat', sans-serif;
+    color: $dark;
+    font-size: 11pt;
+    transition: all 0.4s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 4px $primary;
+      border: 1px inset rgba($primary, 0.6);
+    }
+  }
+}
