@@ -1,0 +1,64 @@
+@import "src/styles/variables";
+
+.Slide {
+  &-one {
+    position: relative;
+    height: 100%;
+    background-image: url("./slide_1.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 90%;
+
+    &__text {
+      position: absolute;
+      width: 60%;
+      bottom: 100px;
+      left: 100px;
+      color: $white;
+      font-weight: 700;
+      font-size: 54pt;
+    }
+  }
+
+  &-two {
+    position: relative;
+    height: 100%;
+    background-image: url("./slide_2.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 90%;
+
+    &__text {
+      position: absolute;
+      width: 60%;
+      bottom: 120px;
+      left: 270px;
+      color: $white;
+      font-weight: 700;
+      font-size: 54pt;
+    }
+  }
+
+  &-three {
+    position: relative;
+    height: 100%;
+    background-image: url("./slide_3.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 80%;
+
+    &__text {
+      text-align: right;
+      position: absolute;
+      width: 60%;
+      bottom: 40px;
+      right: 60px;
+      color: $white;
+      font-weight: 700;
+      font-size: 54pt;
+    }
+  }
+}

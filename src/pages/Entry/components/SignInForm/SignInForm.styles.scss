@@ -1,0 +1,60 @@
+@import "src/styles/variables";
+
+.SignInForm {
+  &__header {
+    &__container {
+      margin-bottom: 80px;
+    }
+
+    &__title {
+      font-weight: 700;
+      color: $dark;
+      font-size: 30pt;
+    }
+
+    &__subtitle {
+      line-height: 140%;
+      font-weight: 600;
+      color: $secondary-dark;
+    }
+  }
+
+  &__container {
+    padding: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & .label {
+      color: $secondary-dark;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    &__text {
+      font-weight: 600;
+      color: $dark;
+
+      strong {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

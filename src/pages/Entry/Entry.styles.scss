@@ -39,3 +39,24 @@
 
   }
 }
+
+.fade-slide-enter{
+  opacity: 0;
+  transform: translateX(-500px);
+}
+.fade-slide-exit{
+  opacity: 1;
+  transform: translateX(0px);
+}
+.fade-slide-enter-active{
+  opacity: 1;
+  transform: translateX(0px);
+}
+.fade-slide-exit-active{
+  opacity: 0;
+  transform: translateX(-500px);
+}
+.fade-slide-enter-active,
+.fade-slide-exit-active{
+  transition: all 500ms;
+}

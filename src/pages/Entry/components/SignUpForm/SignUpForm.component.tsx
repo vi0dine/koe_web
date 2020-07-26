@@ -4,7 +4,11 @@ import Input from '../../../../shared/components/Input/Input.component';
 import Checkbox from '../../../../shared/components/Checkbox/Checkbox.component';
 import Button from '../../../../shared/components/Button/Button.component';
 
-const SignUpForm = () => {
+type SignUpFormProps = {
+    onFormChange: (val: string) => void;
+};
+
+const SignUpForm = ({ onFormChange }: SignUpFormProps) => {
     const [userData, setUserData] = useState({
         username: '',
         email: '',
@@ -54,7 +58,7 @@ const SignUpForm = () => {
                 />
                 <div className={'SignUpForm__footer'}>
                     <span className={'SignUpForm__footer__text'}>
-                        Already have an account? <strong>Log in</strong>
+                        Already have an account? <strong onClick={() => onFormChange('signIn')}>Log in</strong>
                     </span>
                 </div>
             </form>
