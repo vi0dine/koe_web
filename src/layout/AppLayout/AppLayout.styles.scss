@@ -9,6 +9,7 @@
 
   &__window {
     flex: 1;
+    z-index: 10000;
   }
 
   &__content {

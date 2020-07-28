@@ -1,0 +1,70 @@
+@import 'src/styles/variables';
+
+.TestsPage {
+  &__container {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  &__tests {
+    display: flex;
+    flex-direction: row;
+    flex: 2 1 auto;
+    min-height: 55vh;
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-height: 30vh;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-right: 60px;
+  }
+}
+
+.TestsList {
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  &__container {
+    height: 100%;
+    max-height: 45vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ebebeb;
+    border-radius: 20px 0 0 20px;
+    padding: 1rem;
+  }
+}
+
+.ResultsList {
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  &__container {
+    max-height: 23vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ebebeb;
+    border-radius: 20px 0 0 20px;
+    padding: 1rem;
+  }
+}

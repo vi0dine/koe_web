@@ -9,6 +9,7 @@ import ResourcesPage from './pages/Resources/Resources.page';
 import CalendarPage from './pages/Calendar/Calendar.page';
 import EntryLayout from './layout/EntryLayout/EntryLayout';
 import EntryPage from './pages/Entry/Entry.page';
+import TestPage from './pages/Test/Test.page';
 
 function App() {
     return (
@@ -28,9 +29,14 @@ function App() {
                     <CoursesPage />
                 </AppLayout>
             </Route>
-            <Route path={'/tests'}>
+            <Route exact path={'/tests'}>
                 <AppLayout>
                     <TestsPage />
+                </AppLayout>
+            </Route>
+            <Route path={'/tests/:id'}>
+                <AppLayout>
+                    <TestPage />
                 </AppLayout>
             </Route>
             <Route path={'/resources'}>
