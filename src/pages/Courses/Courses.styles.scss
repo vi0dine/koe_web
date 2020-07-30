@@ -1,0 +1,22 @@
+@import "src/styles/variables";
+
+.Courses {
+  &__container {
+
+  }
+
+  &__courses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow-y: hidden;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: $dark;
+  }
+}

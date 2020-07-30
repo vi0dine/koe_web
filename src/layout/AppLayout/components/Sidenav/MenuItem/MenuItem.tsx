@@ -16,7 +16,9 @@ const MenuItem = ({ title, icon, to }: MenuItemProps) => {
     };
 
     const isActive = (path: string) => {
-        return path === to;
+        const subpath = to.substr(1, to.length);
+        const reg = new RegExp(subpath);
+        return (subpath.length && path.match(reg)) || path === to;
     };
 
     return (

@@ -1,0 +1,61 @@
+@import "src/styles/variables";
+
+.ResourcesPage {
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__column {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-right: 60px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: $dark;
+    margin-bottom: 1rem;
+  }
+
+  &__presentations {
+
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    background: #ebebeb;
+    border-radius: 20px 0 0 20px;
+    margin-bottom: 1rem;
+  }
+
+  &__lives {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: #ebebeb;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &__videos {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    background: #ebebeb;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  &__exercises {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    background: #ebebeb;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+}
