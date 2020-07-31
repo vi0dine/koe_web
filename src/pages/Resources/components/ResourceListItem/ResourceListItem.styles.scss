@@ -49,10 +49,49 @@
     }
   }
 
+  &__datetime {
+    &__container {
+      display: flex;
+      flex: 2;
+      z-index: 999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      font-variant: small-caps;
+      line-height: 12px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #EBEBEB;
+      text-shadow: 0 0 5px #5A5A54;
+      margin-bottom: 10px;
+    }
+
+    &__date {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      font-variant: small-caps;
+      line-height: 15px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #EBEBEB;
+      text-shadow: 0 0 5px #5A5A54;
+    }
+  }
+
   &__info {
     &__container {
       z-index: 999;
       display: flex;
+      flex: 3;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;

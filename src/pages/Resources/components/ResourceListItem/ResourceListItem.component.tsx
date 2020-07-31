@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faVideo, faTasks, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import './ResourceListItem.styles.scss';
@@ -37,12 +38,34 @@ const ResourceListItem = ({
         }
     };
 
+    const getDatetimeInfo = () => {
+        if (resourceType === 'LIVE') {
+            return (
+                <div className={'ResourceListItem__datetime__container'}>
+                    <span className={'ResourceListItem__datetime__title'}>Scheduled for:</span>
+                    <span className={'ResourceListItem__datetime__date'}>
+                        {moment(scheduledFor).format('DD/MM/YYYY HH:mm')}
+                    </span>
+                </div>
+            );
+        } else {
+            return (
+                <div className={'ResourceListItem__datetime__container'}>
+                    <span className={'ResourceListItem__datetime__title'}>Deadline</span>
+                    <span className={'ResourceListItem__datetime__date'}>
+                        {moment(deadline).format('DD/MM/YYYY HH:mm')}
+                    </span>
+                </div>
+            );
+        }
+    };
+
     return (
         <div className={'ResourceListItem__container'}>
             <div className={'ResourceListItem__icon__container'}>
                 <FontAwesomeIcon className={'ResourceListItem__icon'} icon={getIconByType()} />
             </div>
-            <div></div>
+            {(resourceType === 'LIVE' || resourceType === 'EXERCISE') && getDatetimeInfo()}
             <div className={'ResourceListItem__info__container'}>
                 <span className={'ResourceListItem__info__name'}>{name}</span>
                 <span className={'ResourceListItem__info__course'}>Course: {courseName}</span>

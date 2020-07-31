@@ -10,7 +10,7 @@
     min-height: 85vh;
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto;
+    flex: 1;
     margin-right: 60px;
   }
 
@@ -23,39 +23,40 @@
   }
 
   &__presentations {
-
     display: flex;
-    flex: 3;
+    max-height: 55vh;
     flex-direction: column;
     background: #ebebeb;
     border-radius: 20px 0 0 20px;
+    overflow-y: scroll;
     margin-bottom: 1rem;
   }
 
   &__lives {
     display: flex;
-    flex: 1;
+    max-height: 22vh;
     flex-direction: column;
     background: #ebebeb;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    overflow-y: scroll;
   }
 
   &__videos {
     display: flex;
-    flex: 2;
+    max-height: 38vh;
     flex-direction: column;
     background: #ebebeb;
     border-radius: 10px;
     margin-bottom: 1rem;
+    overflow-y: scroll;
   }
 
   &__exercises {
     display: flex;
-    flex: 2;
+    max-height: 38vh;
     flex-direction: column;
     background: #ebebeb;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    overflow-y: scroll;
   }
 }
