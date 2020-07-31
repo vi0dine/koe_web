@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+
+.RemindersBox {
+  &__container {
+    display: flex;
+    width: 90%;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+
+  &__reminders {
+    display: flex;
+    height: 250px;
+    width: 100%;
+    background: #ebebeb;
+    border-radius: 10px;
+  }
+}

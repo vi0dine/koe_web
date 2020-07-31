@@ -21,3 +21,24 @@
     background: white;
   }
 }
+
+.dock-slide-enter{
+  opacity: 0;
+  transform: translateX(400px);
+}
+.dock-slide-exit{
+  opacity: 1;
+  transform: translateX(0px);
+}
+.dock-slide-enter-active{
+  opacity: 1;
+  transform: translateX(0px);
+}
+.dock-slide-exit-active{
+  opacity: 0;
+  transform: translateX(400px);
+}
+.dock-slide-enter-active,
+.dock-slide-exit-active{
+  transition: all 500ms;
+}
