@@ -10,6 +10,11 @@
   height: 60px;
   color: $primary-dark;
   background: transparent;
+  transition: width 0.6s ease-in-out;
+
+  .collapsed & {
+    width: 40px;
+  }
 
   &::after {
     pointer-events: none;
@@ -48,6 +53,10 @@
     color: $secondary-light;
     transition: color 0.7s ease-in-out;
     z-index: 10000;
+
+    .collapsed & {
+      opacity: 0;
+    }
   }
 
   &:hover::after, &.active::after {

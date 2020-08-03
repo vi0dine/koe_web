@@ -1,0 +1,33 @@
+@import "src/styles/variables";
+
+.TestSettingItem {
+  &__container {
+    margin: 10px
+  }
+
+  &__label {
+    margin-left: 20px;
+    font-size: 21px;
+
+    &.enabled {
+      font-weight: 500;
+      color: $success;
+    }
+
+    &.disabled {
+      color: rgba($dark, 0.5);
+    }
+  }
+
+  &__icon {
+    font-size: 21px;
+
+    &.enabled {
+      color: $success;
+    }
+
+    &.disabled {
+      color: rgba($dark, 0.5);
+    }
+  }
+}

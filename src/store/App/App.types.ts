@@ -1,1 +1,2 @@
 export const TOGGLE_DOCK = 'TOGGLE_DOCK';
+export const COLLAPSE_SIDENAV = 'COLLAPSE_SIDENAV';

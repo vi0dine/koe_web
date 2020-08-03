@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.TestPage {
+  &__container {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  &__test {
+    display: flex;
+    flex-direction: row;
+    flex: 2 1 auto;
+    min-height: 55vh;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-right: 60px;
+
+    &__title {
+      font-size: 32px;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+
+  &__resources {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    &__title {
+      font-size: 22px;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-height: 30vh;
+
+    &__title {
+      font-size: 22px;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+}

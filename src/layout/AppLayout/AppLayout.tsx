@@ -10,13 +10,14 @@ type AppLayoutProps = { children: ReactNode };
 
 const AppLayout = ({ children }: AppLayoutProps) => {
     const dockOpened = useSelector((state: RootStateOrAny) => state.AppState.dockOpened);
+    const collapsed = useSelector((state: RootStateOrAny) => state.AppState.sidenavCollapsed);
 
     return (
         <div className={'app-layout__container'}>
             <Sidenav />
             <div className={'app-layout__window'}>
                 <Topbar />
-                <div className={'app-layout__content'}>{children}</div>
+                <div className={`app-layout__content ${collapsed ? 'collapsed' : ''}`}>{children}</div>
             </div>
             <SwitchTransition mode={'out-in'}>
                 <CSSTransition

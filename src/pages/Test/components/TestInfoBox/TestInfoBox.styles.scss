@@ -1,0 +1,39 @@
+@import "src/styles/variables";
+
+.TestInfoBox {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    background: #EBEBEB;
+    border-radius: 20px;
+  }
+
+  &__basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    &__title {
+      font-variant: small-caps;
+      color: $primary-dark;
+      margin-right: 20px;
+      font-size: 21px;
+    }
+
+    &__value {
+      color: $primary;
+      font-weight: 500;
+
+      &:not(last_child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
