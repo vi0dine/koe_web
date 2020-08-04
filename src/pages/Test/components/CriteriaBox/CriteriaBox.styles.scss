@@ -1,0 +1,65 @@
+@import "src/styles/variables";
+
+.CriteriaBox {
+  &__container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    background: #EBEBEB;
+    border-radius: 20px;
+  }
+
+  &__maxPoints {
+    color: $primary-dark;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 30px 0;
+  }
+
+  &__criterium {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__grade {
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      background: $secondary-light;
+      padding: 10px 40px 10px 40px;
+      color: $primary;
+      font-weight: 600;
+      margin-right: 30px;
+    }
+
+    &__range {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    &__percentage {
+      color: $primary;
+      font-weight: 500;
+    }
+
+    &__points {
+      color: $primary;
+      font-size: 9px;
+      font-weight: 500;
+    }
+  }
+}

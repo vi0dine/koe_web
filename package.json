@@ -19,6 +19,7 @@
         "@types/react-transition-group": "^4.4.0",
         "@types/redux-logger": "^3.0.8",
         "connected-react-router": "^6.8.0",
+        "fitty": "^2.3.2",
         "history": "^4.10.1",
         "moment": "^2.27.0",
         "node-sass": "^4.14.1",
