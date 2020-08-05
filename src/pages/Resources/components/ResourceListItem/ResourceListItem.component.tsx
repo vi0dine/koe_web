@@ -12,6 +12,7 @@ type ResourceListItemProps = {
     resourceType: string;
     scheduledFor?: number;
     deadline?: number;
+    minified?: boolean;
 };
 
 const ResourceListItem = ({
@@ -22,6 +23,7 @@ const ResourceListItem = ({
     resourceType,
     scheduledFor,
     deadline,
+    minified = false,
 }: ResourceListItemProps) => {
     const getIconByType = () => {
         switch (resourceType) {
@@ -42,7 +44,7 @@ const ResourceListItem = ({
         if (resourceType === 'LIVE') {
             return (
                 <div className={'ResourceListItem__datetime__container'}>
-                    <span className={'ResourceListItem__datetime__title'}>Scheduled for:</span>
+                    <span className={'ResourceListItem__datetime__title'}>Scheduled for</span>
                     <span className={'ResourceListItem__datetime__date'}>
                         {moment(scheduledFor).format('DD/MM/YYYY HH:mm')}
                     </span>
@@ -61,7 +63,7 @@ const ResourceListItem = ({
     };
 
     return (
-        <div className={'ResourceListItem__container'}>
+        <div className={`ResourceListItem__container ${minified ? 'minified' : ''}`}>
             <div className={'ResourceListItem__icon__container'}>
                 <FontAwesomeIcon className={'ResourceListItem__icon'} icon={getIconByType()} />
             </div>

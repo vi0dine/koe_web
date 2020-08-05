@@ -47,6 +47,10 @@
       justify-content: flex-start;
       align-items: center;
     }
+
+    .minified & {
+      font-size: 20px;
+    }
   }
 
   &__datetime {
@@ -58,6 +62,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      .minified & {
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
     }
 
     &__title {
@@ -71,6 +80,10 @@
       color: #EBEBEB;
       text-shadow: 0 0 5px #5A5A54;
       margin-bottom: 10px;
+
+      .minified & {
+        font-size: 12px;
+      }
     }
 
     &__date {
@@ -84,6 +97,11 @@
       text-align: center;
       color: #EBEBEB;
       text-shadow: 0 0 5px #5A5A54;
+
+      .minified & {
+        font-size: 12px;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -107,6 +125,11 @@
       text-align: right;
       color: #EBEBEB;
       margin-bottom: 10px;
+
+      .minified & {
+        font-size: 16px;
+        white-space: nowrap;
+      }
     }
 
     &__course {
@@ -116,6 +139,10 @@
       line-height: 12px;
       text-align: right;
       color: #EBEBEB;
+
+      .minified & {
+        font-size: 11px;
+      }
     }
   }
 }

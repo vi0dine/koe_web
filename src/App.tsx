@@ -11,6 +11,7 @@ import EntryLayout from './layout/EntryLayout/EntryLayout';
 import EntryPage from './pages/Entry/Entry.page';
 import TestPage from './pages/Test/Test.page';
 import CoursePage from './pages/Course/Course.page';
+import QuestionPage from './pages/Question/Question.page';
 
 function App() {
     return (
@@ -40,9 +41,14 @@ function App() {
                     <TestsPage />
                 </AppLayout>
             </Route>
-            <Route path={'/tests/:id'}>
+            <Route exact path={'/tests/:id'}>
                 <AppLayout>
                     <TestPage />
+                </AppLayout>
+            </Route>
+            <Route path={'/tests/:id/performing'}>
+                <AppLayout>
+                    <QuestionPage />
                 </AppLayout>
             </Route>
             <Route path={'/resources'}>

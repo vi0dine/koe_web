@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+
+.QuestionBox {
+  &__container {
+    display: flex;
+    height: calc(80vh - 40px);
+    width: 95%;
+    margin: 20px 0 20px 0;
+    background: #EBEBEB;
+    border-radius: 10px;
+  }
+}

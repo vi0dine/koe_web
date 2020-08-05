@@ -4,6 +4,10 @@ import './Test.styles.scss';
 import TestInfoBox from './components/TestInfoBox/TestInfoBox.component';
 import CriteriaBox from './components/CriteriaBox/CriteriaBox.component';
 import ResourceListItem from '../Resources/components/ResourceListItem/ResourceListItem.component';
+import StatsBox from './components/StatsBox/StatsBox.component';
+import { push } from 'connected-react-router';
+import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router';
 
 const TestPage = () => {
     const mockTest = {
@@ -90,6 +94,8 @@ const TestPage = () => {
             },
         ],
     };
+    const { id } = useParams();
+    const dispatch = useDispatch();
 
     return (
         <div className={'TestPage__container'}>
@@ -120,10 +126,11 @@ const TestPage = () => {
                                     </span>
                                 </div>
                             )}
-                            <div className={'TestPage__start__container'}>
-                                <span className={'TestPage__start__text'}>START</span>
-                            </div>
-                            <div className={'TestPage__start__container'}>
+                            <StatsBox />
+                            <div
+                                onClick={() => dispatch(push(`/tests/${id}/performing`))}
+                                className={'TestPage__start__container'}
+                            >
                                 <span className={'TestPage__start__text'}>START</span>
                             </div>
                         </div>
@@ -141,6 +148,7 @@ const TestPage = () => {
                                     courseName={resource.courseName}
                                     resourceLink={resource.resourceLink}
                                     resourceType={resource.resourceType}
+                                    minified
                                 />
                             );
                         })}

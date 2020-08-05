@@ -1,0 +1,45 @@
+@import "src/styles/variables";
+
+.QuestionPage {
+  &__container {
+
+  }
+
+  &__header {
+    &__title {
+      color: $dark;
+      font-weight: 600;
+      font-size: 21px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: $primary-light;
+      border-radius: 10px;
+      padding: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__icon {
+        color: $white;
+        margin: 0 5px;
+      }
+
+      &__text {
+        color: $white;
+        margin: 0 5px;
+      }
+    }
+  }
+}
