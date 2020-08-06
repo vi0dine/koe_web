@@ -27,6 +27,12 @@
       border-radius: 10px;
       padding: 10px;
 
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        background: #EBEBEB;
+      }
+
       &:hover {
         cursor: pointer;
       }

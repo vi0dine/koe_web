@@ -1,0 +1,59 @@
+@import "src/styles/variables";
+
+.BasicQuestion {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 20px;
+  }
+
+  &__question {
+    &__container {
+      display: flex;
+      padding: 20px;
+    }
+    &__text {
+      font-size: 30px;
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+
+  &__answers {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__answer {
+    &__container {
+      flex: 0 0 45%;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background: $primary-light;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.selected {
+        background: $primary-dark;
+      }
+    }
+    &__text {
+      font-size: 20px;
+      color: $white;
+
+      .selected & {
+        font-weight: 500;
+      }
+    }
+  }
+}
